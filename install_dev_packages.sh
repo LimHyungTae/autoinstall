@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ev
 
 command_exists() {
   command -v "$@" >/dev/null 2>&1
@@ -15,9 +15,9 @@ main() {
   
   $RUN apt-get update -y
   $RUN apt-get upgrade -y
-  $RUN apt-get install -y git wget vim ca-certificates gpg lsb-release
+  $RUN apt-get install -y git wget vim ca-certificates gpg lsb-release software-properties-common
 
-  # Add universe repository (to install gnome-tweaks)
+  # Add universe repository (to install gnome-tweaks). `software-properties-common` must be installed
   $RUN add-apt-repository universe
 
   # Time sync. for dual booting btw Window and Ubuntu
