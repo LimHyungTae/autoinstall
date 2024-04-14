@@ -17,6 +17,16 @@ main() {
   $RUN apt-get upgrade -y
   $RUN apt-get install -y git wget vim ca-certificates gpg lsb-release software-properties-common
 
+  # Install higher CMake.
+  # If you just try to `sudo apt-get install cmake`, then lower version of cmake is installed
+  # Please refer to 'https://apt.kitware.com/'
+  test -f /usr/share/doc/kitware-archive-keyring/copyright ||
+  wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | $RUN tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null
+
+  echo "deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | $RUN tee /etc/apt/sources.list.d/kitware.list >/dev/null
+  $RUN apt-get update -y
+  $RUN apt-get install cmake -y
+
   # Add universe repository (to install gnome-tweaks). `software-properties-common` must be installed
   $RUN add-apt-repository universe
 
