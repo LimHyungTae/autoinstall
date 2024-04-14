@@ -55,7 +55,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/ma
 
 **If you want to install ROS-Noetic (for Ubuntu 20.04)**:
 
-**NOTE** the you have to use `bash`, not `sh` in front of the command (because Ubuntu's shell is [dash](https://velog.io/@jiyeong3141592/binsh-%EC%9D%98%EB%AF%B8). 
+**NOTE** the you have to use `bash`, not `sh` in front of the command (because Ubuntu's shell is [dash](https://velog.io/@jiyeong3141592/binsh-%EC%9D%98%EB%AF%B8)). 
 
 You can check it by typing `ls -ahl /bin/sh` in your cmd (then, you can show that `sh` is linked to `dash`, i.e. `/bin/sh -> dash`).
 
@@ -66,8 +66,11 @@ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstal
 # e.g. if you use `zsh`, 
 $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)zsh" 
 ```
-## NOTE
+
+No space seems to be weird, but it works!
+
+## NOTE (Minor)
 
 * Rather using `$(lsb_release -sc)`, use `$(. /etc/os-release && echo $UBUNTU_CODENAME)`.
-* `
+
 

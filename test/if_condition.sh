@@ -1,4 +1,5 @@
 #!/bin/bash
+# Use: "bash if_condition.sh ${'bash' or 'zsh'}"
 set -e
 
 command_exists() {
