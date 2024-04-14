@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=/usr/local/MATLAB/R2022b/bin/matlab
+Name=Matlab
+Comment=Matlab
+

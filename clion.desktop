@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=/opt/clion-2022.3.3/bin/clion.sh
+Name=Clion
+Comment=Clion
+Icon=/opt/clion-2022.3.3/bin/clion.svg
+
