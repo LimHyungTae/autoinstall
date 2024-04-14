@@ -10,18 +10,11 @@ user_can_sudo() {
   ! LANG= sudo -n -v 2>&1 | grep -q "may not run sudo"
 }
 
-install_neovim() {
-  RUN=$(user_can_sudo && echo "sudo" || echo "command")
-  $RUN add-apt-repository ppa:neovim-ppa/stable 
-  $RUN apt-get update -y
-  $RUN apt-get install neovim -y
-}
-
 main() {
   RUN=$(user_can_sudo && echo "sudo" || echo "command")
   
-  $RUN apt-get update
-  $RUN apt-get upgrade
+  $RUN apt-get update -y
+  $RUN apt-get upgrade -y
   $RUN apt-get install -y git wget vim ca-certificates gpg lsb-release
 
   # Add universe repository (to install gnome-tweaks)

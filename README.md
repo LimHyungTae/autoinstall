@@ -1,6 +1,6 @@
-# Hyungtae's ubuntu Auto-Installation
+# Hyungtae's Ubuntu Auto-Installation
 
-Auto installation of Ubuntu environments (tested on 20.04 and Ubuntu 22.04) to reduce the time taken to set up a new computer.
+Auto-installation of Ubuntu environments (tested on 20.04 and Ubuntu 22.04) to reduce the time taken to set up a new computer.
 
 # (Important) Requirements
 
@@ -15,12 +15,13 @@ $ sudo apt-get install curl git lsb-release -y
 Just run the below command to bootstrap your Ubuntu setting. I recommend using this script in your local computer, not server.
 
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu_autoinstall/main/install_dev_packages.sh)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_dev_packages.sh)"
 ```
 
-(Optional. Only for desktop)
+(Optional. Only for desktop, not docker environment!)
+
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu_autoinstall/main/install_util_packages.sh)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_util_packages.sh)"
 ```
 
 Below things are installed (update: Mar 10th, 2023)
@@ -49,7 +50,7 @@ If you don't want to install something, push this repository and comment those l
 **If you want to install zsh**:
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu20.04_autoinstall/main/install_zsh.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_zsh.sh)"
 ```
 
 **If you want to install ROS-Noetic (for Ubuntu 20.04)**:
@@ -59,11 +60,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu20.04_au
 You can check it by typing `ls -ahl /bin/sh` in your cmd (then, you can show that `sh` is linked to `dash`, i.e. `/bin/sh -> dash`).
 
 ```
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu20.04_autoinstall/main/install_ros_noetic.sh)${YOUR BASH}" 
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)${YOUR BASH}" 
 # e.g. if you use `bash`, 
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu20.04_autoinstall/main/install_ros_noetic.sh)bash" 
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)bash" 
 # e.g. if you use `zsh`, 
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/ubuntu20.04_autoinstall/main/install_ros_noetic.sh)zsh" 
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)zsh" 
 ```
 ## NOTE
 
