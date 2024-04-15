@@ -7,7 +7,7 @@ Auto-installation of Ubuntu environments (tested on 20.04 and Ubuntu 22.04) to r
 What we only need is curl. Install `curl` before you run the command.
 
 ```
-$ sudo apt-get install curl git lsb-release -y
+sudo apt-get update && sudo apt-get install curl git lsb-release -y
 ```
 
 # All Things are ready!
@@ -15,13 +15,13 @@ $ sudo apt-get install curl git lsb-release -y
 Just run the below command to bootstrap your Ubuntu setting. I recommend using this script in your local computer, not server.
 
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_dev_packages.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_dev_packages.sh)"
 ```
 
 (Optional. Only for desktop, not docker environment!)
 
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_util_packages.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_util_packages.sh)"
 ```
 
 Below things are installed (update: Mar 10th, 2023)
@@ -60,17 +60,55 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/ma
 You can check it by typing `ls -ahl /bin/sh` in your cmd (then, you can show that `sh` is linked to `dash`, i.e. `/bin/sh -> dash`).
 
 ```
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)${YOUR BASH}" 
-# e.g. if you use `bash`, 
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)bash" 
-# e.g. if you use `zsh`, 
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)zsh" 
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)${YOUR BASH}" 
+```
+
+### If you use `bash`, 
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)bash" 
+```
+
+### If you use `zsh`, 
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros_noetic.sh)zsh" 
 ```
 
 No space seems to be weird, but it works!
 
+## Other package
+
+### Anaconda
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_anaconda3.sh)"
+```
+
+### ROS2 in Ubuntu 22.04
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros2_humble.sh)"
+```
+
+### VIM & VIM Vundle
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_vim_and_vundle.sh)"
+```
+
+### Oh-My-ZSH
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_zsh.sh)"
+```
+
+
+
+
+
 ## NOTE (Minor)
 
-* Rather using `$(lsb_release -sc)`, use `$(. /etc/os-release && echo $UBUNTU_CODENAME)`.
+* Rather using `$(lsb_release -sc)`, I used `$(. /etc/os-release && echo $UBUNTU_CODENAME)`.
 
 
