@@ -24,7 +24,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/ma
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_util_packages.sh)"
 ```
 
-Below things are installed (update: Mar 10th, 2023)
+By doing so, below things are installed (update: Mar 10th, 2023)
 * git
 * wget
 * vim
@@ -41,7 +41,7 @@ Below things are installed (update: Mar 10th, 2023)
 * Docker
 ---
 
-If you don't want to install something, push this repository and comment those lines by `#`. Then, just run it like `sh ${DIR}/install_independent_packages.sh`
+If you don't want to install something, `git clone` this repository and comment those lines by `#`. Then, just run it like `sh ${DIR}/install_independent_packages.sh`
 
 ---
 
