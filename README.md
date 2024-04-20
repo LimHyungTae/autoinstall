@@ -79,6 +79,12 @@ No space seems to be weird, but it works!
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_anaconda3.sh)"
 ```
 
+After the installation, rune the below command to update conda:
+
+```
+conda update -n base -c defaults conda --repodata-fn=repodata.json
+```
+
 ### ROS2 in Ubuntu 22.04
 
 ```
