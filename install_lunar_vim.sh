@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 SUDO=${SUDO:=sudo}
 
 # To install Lunar Vim, Neo-Vim == 0.9.0 is required (in Ubuntu 22.04)
@@ -23,8 +26,9 @@ $SUDO dpkg -i ripgrep_13.0.0_amd64.deb
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 # Nerd Font for kitti icons
-git clone https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts && ./install.sh
+# Once you run `install_vim_and_vundle.sh`, below commands are not needed
+# git clone https://github.com/ryanoasis/nerd-fonts.git
+# cd nerd-fonts && ./install.sh
 
 # After then, type
 # :set clipboard+=unnamedplus <- for ctrl + c / ctrl + v

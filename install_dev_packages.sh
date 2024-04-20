@@ -45,6 +45,10 @@ main() {
   # pip3
   $RUN apt install python3-pip -y
 
+  # yadm
+  # Please refer to the utilization case: https://github.com/LimHyungTae/dotfiles/blob/main/README.md
+  $RUN apt install yadm -y
+  
   # Some C++ libraries
   $RUN apt-get install -y libeigen3-dev libboost-all-dev
 

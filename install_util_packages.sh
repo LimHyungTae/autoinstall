@@ -54,19 +54,16 @@ main() {
   
   $RUN apt-get update
 
-  # Time sync. for dual booting btw Window and Ubuntu
-  timedatectl set-local-rtc 1 --adjust-system-clock
-  
   # chrome
   # NOTE: It requires typing `enter` key, so automatic installation may breaks
-  # install_chrome
+  install_chrome
   
   # dconf-editor to change the order of favorites
   # https://askubuntu.com/questions/1108474/how-to-drag-and-move-icons-in-ubuntu-18-04-1-favourites-bar
   sudo apt install dconf-editor
   
   # Notion 
-  install_notion
+  # install_notion
     
   # For playing mkv file
   $RUN apt install ubuntu-restricted-extras mpv -y
@@ -74,20 +71,17 @@ main() {
   # xpad
   $RUN apt install xpad -y  
   
-  # terminator
-  $RUN apt install terminator -y  
-
   # Simple screen recorder
   install_simple_screen_recorder
   
   # Inkscape 
-  $RUN apt-get install inkscape
+  $RUN apt-get install inkscape -y
 
   # Docker
   install_docker
 
   # gnome-tweaks to change `Ctrl` and `Caps Lock` (which is just my setup. You can ignore this)
-  $RUN apt-get install gnome-tweaks
+  $RUN apt-get install gnome-tweaks -y
 }
 
 main 

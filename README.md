@@ -47,12 +47,6 @@ If you don't want to install something, `git clone` this repository and comment 
 
 ## Additional packages
 
-**If you want to install zsh**:
-
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_zsh.sh)"
-```
-
 **If you want to install ROS-Noetic (for Ubuntu 20.04)**:
 
 **NOTE** the you have to use `bash`, not `sh` in front of the command (because Ubuntu's shell is [dash](https://velog.io/@jiyeong3141592/binsh-%EC%9D%98%EB%AF%B8)). 
