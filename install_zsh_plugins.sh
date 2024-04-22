@@ -1,5 +1,10 @@
 ################## Plugins ################## 
-SUDO=${SUDO:=sudo}
+# If sudo is installed, assign 'sudo' to the SUDO variable; otherwise, assign an empty string.
+if command -v sudo >/dev/null 2>&1; then
+    SUDO="sudo"
+else
+    SUDO=""
+fi
 
 $SUDO apt-get update
 
