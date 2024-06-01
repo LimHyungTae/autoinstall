@@ -1,8 +1,21 @@
 #!/bin/bash
-# set -e
+set -e
 
 install_docker() {
-  SUDO=${SUDO:=sudo}
+  command_exists() {
+    command -v "$@" >/dev/null 2>&1
+  }
+
+  user_can_sudo() {
+    command_exists sudo || return 1
+    ! LANG= sudo -n -v 2>&1 | grep -q "may not run sudo"
+  }
+
+  if user_can_sudo; then
+  SUDO="sudo"
+  else
+  SUDO="" # To support docker environment
+  fi
 
   $RUN apt-get remove docker docker-engine docker.io containerd runc
   $RUN apt-get install ca-certificates curl gnupg lsb-release -y

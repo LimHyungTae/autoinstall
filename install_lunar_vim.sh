@@ -1,7 +1,20 @@
 #!/bin/bash
 set -e
 
-SUDO=${SUDO:=sudo}
+command_exists() {
+  command -v "$@" >/dev/null 2>&1
+}
+
+user_can_sudo() {
+  command_exists sudo || return 1
+  ! LANG= sudo -n -v 2>&1 | grep -q "may not run sudo"
+}
+
+if user_can_sudo; then
+SUDO="sudo"
+else
+SUDO="" # To support docker environment
+fi
 
 # To install Lunar Vim, Neo-Vim == 0.9.0 is required (in Ubuntu 22.04)
 wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
