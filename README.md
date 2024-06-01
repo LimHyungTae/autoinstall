@@ -105,9 +105,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/ma
 
 ### Oh-My-ZSH
 
+* Install zsh
+* 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_zsh.sh)"
 ```
+
+* Install zsh plugins
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_zsh_plugins.sh)"
+```
+
 
 
 
