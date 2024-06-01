@@ -10,6 +10,12 @@ What we only need is curl. Install `curl` before you run the command.
 sudo apt-get update && sudo apt-get install curl git lsb-release -y
 ```
 
+In case of the docker case:
+
+```
+apt-get update && apt-get install curl git lsb-release -y
+```
+
 # All Things are ready!
 
 Just run the below command to bootstrap your Ubuntu setting. I recommend using this script in your local computer, not server.
