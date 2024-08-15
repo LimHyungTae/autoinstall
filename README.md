@@ -7,13 +7,13 @@ Auto-installation of Ubuntu environments (tested on 20.04 and Ubuntu 22.04) to r
 What we only need is curl. Install `curl` before you run the command.
 
 ```
-sudo apt-get update && sudo apt-get install curl git lsb-release -y
+sudo apt-get update && sudo apt-get install curl git wget lsb-release -y
 ```
 
-In case of the docker case:
+In case of the **docker** case:
 
 ```
-apt-get update && apt-get install curl git lsb-release -y
+apt-get update && apt-get install curl git wget lsb-release -y
 ```
 
 # All Things are ready!
