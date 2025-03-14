@@ -53,6 +53,7 @@ $SUDO apt-get install xclip xsel
 # Once you run `install_vim_and_vundle.sh`, below commands are not needed
 # git clone https://github.com/ryanoasis/nerd-fonts.git
 # cd nerd-fonts && ./install.sh
+# Then, go to 'Preferences' and set the `Font` as `Hack Nerd Font`
 
 # After then, type
 # :set clipboard+=unnamedplus <- for ctrl + c / ctrl + v
