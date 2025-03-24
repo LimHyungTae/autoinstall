@@ -91,10 +91,10 @@ After the installation, rune the below command to update conda:
 conda update -n base -c defaults conda --repodata-fn=repodata.json
 ```
 
-### ROS2 in Ubuntu 22.04
+### ROS2 in Ubuntu 24.04
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros2_humble.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/LimHyungTae/autoinstall/main/install_ros2_jazzy.sh)"
 ```
 
 ### VIM & VIM Vundle
